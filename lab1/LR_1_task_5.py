@@ -84,8 +84,8 @@ assert gaevsky_recall_score(df.actual_label.values, df.predicted_RF.values) == r
 assert gaevsky_recall_score(df.actual_label.values, df.predicted_LR.values) == recall_score(df.actual_label.values,
                                                                                               df.predicted_LR.values), 'gaevsky_recall_score failed on LR'
 
-print('Recall RF: %.3f' % (bubenko_recall_score(df.actual_label.values, df.predicted_RF.values)))
-print('Recall LR: %.3f' % (bubenko_recall_score(df.actual_label.values, df.predicted_LR.values)))
+print('Recall RF: %.3f' % (gaevsky_recall_score(df.actual_label.values, df.predicted_RF.values)))
+print('Recall LR: %.3f' % (gaevsky_recall_score(df.actual_label.values, df.predicted_LR.values)))
 
 precision_score(df.actual_label.values, df.predicted_RF.values)
 
